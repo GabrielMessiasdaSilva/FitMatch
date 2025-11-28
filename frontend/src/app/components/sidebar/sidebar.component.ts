@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-sidebar',
   template: `
-    <aside class="fixed top-0 left-0 h-screen w-64 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 shadow-2xl border-r-2 border-yellow-400/40 flex flex-col py-8 px-4 z-40">
+    <aside class="fixed top-0 left-0 h-screen w-64 shadow-2xl border-r-2 border-yellow-400/40 flex flex-col py-8 px-4 z-40" style="background: linear-gradient(135deg, #000000ff 0%, #272529ff 50%, #222121ff 100%);">
       <div class="flex flex-col items-center mb-8">
         <svg class="w-12 h-12 mb-2" fill="none" viewBox="0 0 64 64"><circle cx="32" cy="32" r="32" fill="#FFD600"/><path d="M32 18a10 10 0 0 1 10 10v2a10 10 0 0 1-20 0v-2a10 10 0 0 1 10-10z" fill="#23232b"/><path d="M22 40c0-3.314 4.477-6 10-6s10 2.686 10 6v2H22v-2z" fill="#23232b"/></svg>
         <span class="text-yellow-400 font-extrabold text-xl">FitMatch</span>
@@ -45,6 +45,8 @@ import { Router } from '@angular/router';
   `]
 })
 export class SidebarComponent {
+
+  
   userType: string | null = null;
 
   constructor(private auth: AuthService, private router: Router) {

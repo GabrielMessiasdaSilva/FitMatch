@@ -8,22 +8,22 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-teams',
   template: `
-    <div class="min-h-screen p-6 bg-gradient-to-br from-slate-900 via-slate-800 to-black text-slate-100">
+    <div class="min-h-screen p-6 text-gray-100" style="background: linear-gradient(135deg, #000000ff 0%, #272529ff 50%, #ffffffff 100%);">
       <div class="max-w-5xl mx-auto">
         <h2 class="text-3xl font-extrabold mb-6 text-amber-400">Encontrar Times</h2>
-        <form class="flex flex-wrap gap-4 mb-8 items-end bg-slate-800 p-4 rounded-xl border border-slate-700 shadow-lg" [formGroup]="filterForm">
+        <form class="flex flex-wrap gap-4 mb-8 items-end p-4 rounded-xl border border-slate-700 shadow-lg" [formGroup]="filterForm" style="background: linear-gradient(135deg, #000000ff 0%, #000000ff 50%, #000000ff 100%);">
           <div class="flex-1 min-w-[220px]">
             <label class="block text-sm font-semibold mb-1 text-amber-300">Bairro</label>
-            <input formControlName="neighborhood" class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Digite o bairro" />
+            <input formControlName="neighborhood" class="w-full px-5 py-3 rounded-xl bg-black/50 text-slate-100 border border-white/10 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition placeholder:text-slate-600" placeholder="Digite o bairro" />
           </div>
           <div class="flex-1 min-w-[220px]">
             <label class="block text-sm font-semibold mb-1 text-amber-300">Esporte</label>
-            <input formControlName="sport" class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Digite o esporte" />
+            <input formControlName="sport" class="w-full px-5 py-3 rounded-xl bg-black/50 text-slate-100 border border-white/10 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition placeholder:text-slate-600" placeholder="Digite o esporte" />
           </div>
           <button type="button" (click)="loadTeams()" class="px-6 py-2 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold shadow transition">Filtrar</button>
         </form>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div *ngFor="let team of teams" class="bg-gradient-to-br from-slate-900 via-slate-800 to-black rounded-xl border border-slate-700 shadow-lg p-0 flex flex-col">
+          <div *ngFor="let team of teams" class="rounded-xl border border-slate-700 shadow-lg p-0 flex flex-col" style="background: linear-gradient(135deg, #000000ff 0%, #0a0a0aff 50%, #000000ff 100%);">
             <div class="flex items-center gap-4 p-5 border-b border-slate-700">
               <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-amber-400 to-indigo-400 flex items-center justify-center text-xl font-extrabold text-slate-900">{{team.name?.charAt(0)}}</div>
               <div>

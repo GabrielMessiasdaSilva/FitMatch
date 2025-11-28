@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-match-profile',
   template: `
-    <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-black rounded-xl border border-slate-700 shadow-lg p-6 flex flex-col items-center text-center">
+    <div class="rounded-xl border border-slate-700 shadow-lg p-6 flex flex-col items-center text-center" style="background: linear-gradient(135deg, #000000ff 0%, #272529ff 50%, #ffffffff 100%);">
       <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-indigo-400 flex items-center justify-center text-2xl font-extrabold text-slate-900 mb-4">{{ name ? name.charAt(0).toUpperCase() : '?' }}</div>
       <div class="text-xl font-bold text-amber-400 mb-1">{{ name }}</div>
       <div class="text-sm text-slate-400 mb-2">{{ type === 'player' ? 'Jogador' : 'Time' }}</div>

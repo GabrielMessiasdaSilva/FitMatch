@@ -7,12 +7,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   template: `
-    <div class="min-h-screen p-6 bg-gradient-to-br from-slate-900 via-slate-800 to-black text-slate-100">
+    <div class="min-h-screen p-6 text-slate-100" style="background: linear-gradient(135deg, #000000ff 0%, #272529ff 50%, #ffffffff 100%);">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div class="col-span-2">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 shadow-lg">
+              <div class="p-4 rounded-lg border border-slate-700 shadow-lg" style="background: linear-gradient(135deg, #000000ff 0%, #000000ff 50%, #000000ff 100%);">
                 <div class="text-sm text-slate-400">Jogadores cadastrados</div>
                 <div class="text-3xl font-extrabold mt-2 text-amber-400">{{ playersCount }}</div>
                 <div class="mt-3 text-sm text-slate-400">Últimos jogadores</div>
@@ -20,7 +20,7 @@ import { Router } from '@angular/router';
                   <li *ngFor="let p of recentPlayers" class="text-sm text-slate-100">{{ p.name }} — {{ p.position }}</li>
                 </ul>
               </div>
-              <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 shadow-lg">
+              <div class="p-4 rounded-lg border border-slate-700 shadow-lg" style="background: linear-gradient(135deg, #000000ff 0%, #000000ff 50%, #000000ff 100%);">
                 <div class="text-sm text-slate-400">Times cadastrados</div>
                 <div class="text-3xl font-extrabold mt-2 text-amber-400">{{ teamsCount }}</div>
                 <div class="mt-3 text-sm text-slate-400">Times com vagas</div>
@@ -28,7 +28,7 @@ import { Router } from '@angular/router';
                   <li *ngFor="let t of teamsWithVacancies" class="text-sm text-slate-100">{{ t.name }} — {{ t.neededPositions?.join(', ') }}</li>
                 </ul>
               </div>
-              <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 shadow-lg md:col-span-2">
+              <div class="p-4 rounded-lg border border-slate-700 shadow-lg md:col-span-2" style="background: linear-gradient(135deg, #000000ff 0%, #000000ff 50%, #000000ff 100%);">
                 <div class="flex items-center justify-between">
                   <div>
                     <div class="text-sm text-slate-400">Solicitações</div>
@@ -56,11 +56,11 @@ import { Router } from '@angular/router';
               </div>
             </div>
           </div>
-          <div class="bg-slate-800 rounded-lg border border-slate-700 shadow-lg p-4">
+          <div class="rounded-lg border border-slate-700 shadow-lg p-4" style="background: linear-gradient(135deg, #000000ff 0%, #000000ff 50%, #000000ff 100%);">
             <div class="text-sm text-slate-400">Ações Rápidas</div>
             <div class="mt-4 flex flex-col gap-3">
               <button (click)="goTo('players')" class="py-2 rounded-md bg-amber-400 hover:bg-amber-300 text-slate-900 font-semibold">Encontrar Jogadores</button>
-              <button (click)="goTo('teams')" class="py-2 rounded-md bg-indigo-600 hover:bg-indigo-500 text-white font-semibold">Criar Time</button>
+              <button (click)="goTo('teams')" class="py-2 rounded-md bg-white hover:bg-gray-200 text-black font-semibold shadow">Criar Time</button>
               <button (click)="goTo('matches')" class="py-2 rounded-md bg-amber-400 hover:bg-amber-300 text-slate-900 font-semibold">Ver Candidaturas</button>
             </div>
             <div class="mt-8">

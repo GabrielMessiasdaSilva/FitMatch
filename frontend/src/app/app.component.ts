@@ -4,11 +4,13 @@ import { AuthService } from './services/auth.service';
 @Component({
   selector: 'app-root',
   template: `
-  <div class="min-h-screen flex flex-col bg-gradient-to-br from-slate-900 via-slate-800 to-black text-slate-100">
+  <div class="min-h-screen flex flex-col text-slate-100" style="background: linear-gradient(115deg, #000000ff 0%, #000000ff 50%, #000000ff 100%);">
     <!-- TOPBAR -->
-    <header class="h-16 bg-gradient-to-r from-slate-900 to-slate-800 flex items-center px-6 justify-between border-b border-slate-800">
+    <header class="h-16 backdrop-blur-md flex items-center px-6 justify-between border-b border-white/10 sticky top-0 z-50">
       <div class="flex items-center gap-4">
-        <div class="text-lg font-extrabold text-amber-400">FITMATCH</div>
+        <a routerLink="/" class="text-2xl font-extrabold tracking-tighter hover:opacity-90 transition-opacity">
+            <span class="text-white">FIT</span><span class="text-amber-400">MATCH</span>
+          </a>
       </div>
       <div class="flex items-center gap-3">
         <ng-container *ngIf="auth.isAuthenticated(); else guest">
@@ -17,8 +19,8 @@ import { AuthService } from './services/auth.service';
           <button (click)="auth.logout()" class="ml-2 px-4 py-2 rounded bg-rose-600 text-white font-bold">Sair</button>
         </ng-container>
         <ng-template #guest>
-          <a routerLink="/login" class="text-sm text-amber-400 px-4 py-2 rounded bg-slate-800 font-bold">Entrar</a>
-          <a routerLink="/register" class="text-sm text-amber-400 px-4 py-2 rounded bg-slate-900 font-bold border border-amber-400 ml-2">Cadastrar</a>
+          <a routerLink="/login" class="text-sm font-bold px-4 py-2 rounded-lg transition border border-amber-400 bg-black text-white hover:bg-amber-400 hover:text-black hover:border-white">Entrar</a>
+          <a routerLink="/register" class="text-sm font-bold px-4 py-2 rounded-lg transition border border-amber-400 bg-black text-white hover:bg-amber-400 hover:text-black hover:border-white">Cadastrar</a>
         </ng-template>
       </div>
     </header>

@@ -111,52 +111,6 @@ import { Component } from '@angular/core';
 
   ,
   styles: [`
-    /* --- Estilos do Botão de Fogo (Mantidos) --- */
-    .fire-button {
-      position: relative;
-      display: inline-block;
-      padding: 1rem 2rem;
-      border-radius: 9999px;
-      background-color: #fbbf24;
-      color: #0f172a;
-      font-weight: 800;
-      font-size: 1.25rem;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-      text-decoration: none;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-    .fire-button:hover {
-      background-color: #fcd34d;
-      transform: scale(1.05);
-    }
-    .fire-button span {
-      position: relative;
-      z-index: 1;
-    }
-    .fire-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: repeating-linear-gradient(
-        -45deg,
-        #ef4444, #ef4444 10px,
-        #f59e0b 10px, #f59e0b 20px,
-        #fcd34d 20px, #fcd34d 30px
-      );
-      background-size: 200% 200%;
-      opacity: 0.6;
-      z-index: 0;
-      animation: fire-animation 2s linear infinite;
-    }
-    @keyframes fire-animation {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
-    }
-
     /* --- NOVAS ANIMAÇÕES DOS ÍCONES --- */
 
     /* 1. Lupa: Agita lentamente (Search Shake) */

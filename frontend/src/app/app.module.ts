@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Importamos HTTP_INTERCEPTORS e HttpClientModule
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 // Routing
@@ -24,6 +24,13 @@ import { PublishVacancyComponent } from './components/publish-vacancy/publish-va
 import { PostGameMonitorComponent } from './components/post-game-monitor/post-game-monitor.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AcessoRestritoComponent } from './components/acesso-restrito/acesso-restrito.component';
+import { ListVacanciesComponent } from './components/list-vacancies/list-vacancies.component';
+import { EditPlayerProfileComponent } from './components/edit-player-profile/edit-player-profile.component';
+import { EditTeamComponent } from './components/edit-team/edit-team.component';
+import { ManageRosterComponent } from './components/manage-roster/manage-roster.component';
+import { HistoryGamesComponent } from './components/history-games/history-games.component';
+import { RegisterGameComponent } from './components/register-game/register-game.component';
+import { EvaluatePlayersComponent } from './components/evaluate-players/evaluate-players.component';
 
 // Interceptor
 import { AuthInterceptor } from './services/auth.interceptor'; // Certifique-se que o caminho está correto
@@ -54,7 +61,14 @@ import { MatTableModule } from '@angular/material/table';
     PublishVacancyComponent,
     PostGameMonitorComponent,
     SidebarComponent,
-    AcessoRestritoComponent
+    AcessoRestritoComponent,
+    ListVacanciesComponent,
+    EditPlayerProfileComponent,
+    EditTeamComponent,
+    ManageRosterComponent,
+    HistoryGamesComponent,
+    RegisterGameComponent,
+    EvaluatePlayersComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +77,7 @@ import { MatTableModule } from '@angular/material/table';
     BrowserAnimationsModule,
     HttpClientModule, // Necessário para o sistema de interceptors de classe
     ReactiveFormsModule,
+    FormsModule, // Necessário para ngModel
     // Material
     MatButtonModule,
     MatCardModule,

@@ -1,0 +1,90 @@
+<div class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 p-4 md:p-8 ml-0 md:ml-64">
+  <div class="max-w-4xl mx-auto">
+  <!-- Header -->
+  <div class="mb-8">
+    <button (click)="goBack()" class="text-amber-400 hover:text-amber-300 mb-4 flex items-center gap-2">
+      <span class="text-xl">←</span>
+      <span>Voltar</span>
+    </button>
+    <h1 class="text-4xl font-bold text-amber-400 mb-2">Histórico de Jogos</h1>
+    <p class="text-slate-400">Acompanhe seus jogos e avaliações</p>
+  </div>
+
+  <!-- Notificação rápida -->
+  <div *ngIf="newEvalNotification" class="fixed top-20 right-8 bg-amber-500 text-black px-4 py-2 rounded-lg shadow-lg z-50">
+    Novas avaliações registradas!
+  </div>
+
+  <!-- Estatísticas -->
+  <div class="grid grid-cols-2 gap-4 mb-8">
+    <div class="bg-gradient-to-br from-amber-900/30 to-amber-800/20 border border-amber-400/20 rounded-lg p-4">
+      <div class="text-2xl font-bold text-amber-400">{{ estatisticas.totalJogos }}</div>
+      <div class="text-sm text-slate-400">Total de Jogos</div>
+    </div>
+    <div class="bg-gradient-to-br from-amber-900/30 to-amber-800/20 border border-amber-400/20 rounded-lg p-4">
+      <div class="text-2xl font-bold text-amber-400">{{ estatisticas.ratingMedio }}</div>
+      <div class="text-sm text-slate-400">Rating Médio</div>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div *ngIf="loading" class="text-center py-12">
+    <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-slate-600 border-t-amber-400"></div>
+    <p class="text-slate-400 mt-4">Carregando histórico...</p>
+  </div>
+
+  <!-- Error -->
+  <div *ngIf="errorMessage && !loading" class="bg-red-900/30 border border-red-400/20 rounded-lg p-4 mb-6">
+    <p class="text-red-400">{{ errorMessage }}</p>
+  </div>
+
+  <!-- Lista de Jogos -->
+  <div *ngIf="!loading && games.length > 0" class="space-y-4">
+    <div *ngFor="let game of games" 
+         class="bg-gradient-to-r from-slate-800/50 to-slate-700/50 border border-amber-400/20 backdrop-blur-sm rounded-lg p-6 hover:border-amber-400/40 transition">
+      
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+        <!-- Informações do Jogo -->
+        <div class="flex-1">
+          <div class="text-amber-400 font-semibold mb-2">{{ game.data }}</div>
+          <div class="text-white font-semibold mb-1">📍 {{ game.local }}</div>
+          <div class="text-slate-400 text-sm">Time ID: {{ game.timeId }}</div>
+        </div>
+
+        <!-- Rating -->
+        <div class="bg-amber-900/30 border border-amber-400/20 rounded-lg px-4 py-2">
+          <div class="text-sm text-slate-400">Rating Recebido</div>
+          <div class="text-2xl font-bold text-amber-400">{{ game.ratingMedio || '-' }}</div>
+          <div class="text-xs text-slate-500" *ngIf="game.avaliacoes">
+            {{ game.avaliacoes.length }} avaliação(ões)
+          </div>
+        </div>
+      </div>
+
+      <!-- Avaliações -->
+      <div *ngIf="game.avaliacoes && game.avaliacoes.length > 0" class="mt-4 pt-4 border-t border-amber-400/10">
+        <div class="text-sm text-slate-400 mb-2">Avaliações recebidas:</div>
+        <div *ngFor="let aval of game.avaliacoes" class="text-sm text-slate-300 bg-slate-900/50 rounded px-3 py-2 mb-2">
+          <div class="flex items-center gap-2">
+            <span class="text-amber-400 font-semibold">⭐ {{ aval.nota }}/5</span>
+            <span class="text-slate-500">-</span>
+            <span class="text-slate-400">{{ aval.comentario }}</span>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!game.avaliacoes || game.avaliacoes.length === 0" class="mt-4 pt-4 border-t border-amber-400/10">
+        <p class="text-sm text-slate-500 italic">Nenhuma avaliação recebida ainda</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vazio -->
+  <div *ngIf="!loading && games.length === 0" class="text-center py-12">
+    <div class="text-6xl mb-4">⚽</div>
+    <p class="text-slate-400 text-lg">Você ainda não participou de nenhum jogo</p>
+    <button [routerLink]="['/dashboard']" class="mt-6 bg-amber-500 hover:bg-amber-600 text-black font-semibold px-6 py-2 rounded-lg transition">
+      Ir para Dashboard
+    </button>
+  </div>
+  </div>
+</div>

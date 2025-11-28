@@ -20,15 +20,27 @@ export class TeamsService {
     return this.http.get<any[]>(this.apiUrl, { params });
   }
 
+  getMyTeam(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/my-team`);
+  }
+
   getTeamById(id: string): Observable<any> {
     return this.http.get(`${this.apiUrl}/${id}`);
+  }
+
+  getTeamWithPlayerCount(id: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}/stats`);
   }
 
   updateTeam(id: string, data: any): Observable<any> {
     return this.http.put(`${this.apiUrl}/${id}`, data);
   }
 
-  manageRoster(id: string, playerId: string, action: 'add' | 'remove'): Observable<any> {
-    return this.http.patch(`${this.apiUrl}/${id}/roster`, { playerId, action });
+  manageRoster(id: string, playerId: string, action: 'add' | 'remove' | 'update-position', posicao?: string): Observable<any> {
+    const payload: any = { playerId, action };
+    if (posicao) {
+      payload.posicao = posicao;
+    }
+    return this.http.patch(`${this.apiUrl}/${id}/roster`, payload);
   }
 }

@@ -1,0 +1,53 @@
+<div class="min-h-screen bg-gradient-to-b from-slate-900 to-slate-900 p-8">
+  <div class="mb-8">
+    <button (click)="goBack()" class="text-amber-400 mb-4">← Voltar</button>
+    <h1 class="text-4xl font-bold text-amber-400">Avaliar Jogadores</h1>
+  </div>
+
+  <div *ngIf="loading" class="text-center">Carregando...</div>
+
+  <div *ngIf="!loading && jogadores.length > 0" class="max-w-2xl mx-auto space-y-4">
+    <div *ngFor="let jogador of jogadores" class="bg-slate-800 border border-amber-400/20 rounded-lg p-4">
+      <h3 class="text-white font-semibold">{{ jogador.nome }}</h3>
+
+      <div *ngIf="getForm(jogador.id) && !jogador.evaluated" [formGroup]="getForm(jogador.id)!" class="mt-4 space-y-3">
+        <div>
+          <label class="block text-amber-400 mb-2">Nota (1-5)</label>
+          <select formControlName="nota" class="w-full bg-slate-700 text-white rounded px-3 py-2">
+            <option value="1">1 - Ruim</option>
+            <option value="2">2 - Fraco</option>
+            <option value="3">3 - Regular</option>
+            <option value="4">4 - Bom</option>
+            <option value="5">5 - Excelente</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-amber-400 mb-2">Comentário</label>
+          <textarea formControlName="comentario" rows="2" class="w-full bg-slate-700 text-white rounded px-3 py-2"></textarea>
+        </div>
+
+        <button type="button" (click)="submitAvaliacao(jogador)" [disabled]="!getForm(jogador.id)?.valid"
+                class="w-full bg-amber-500 text-black font-bold py-2 rounded disabled:opacity-50">
+          Salvar
+        </button>
+      </div>
+
+      <div *ngIf="jogador.evaluated" class="mt-4">
+        <div *ngIf="jogador.existingAvaliacao" class="bg-slate-900/40 rounded p-3">
+          <div class="text-sm text-amber-400 font-semibold">Avaliação existente</div>
+          <div class="text-white font-bold">⭐ {{ jogador.existingAvaliacao.nota }} / 5</div>
+          <div class="text-slate-300">{{ jogador.existingAvaliacao.comentario }}</div>
+        </div>
+        <div *ngIf="!jogador.existingAvaliacao" class="text-green-400">✓ Avaliado</div>
+      </div>
+    </div>
+
+    <button type="button" (click)="submitAll()" [disabled]="submitting" 
+            class="w-full bg-amber-500 text-black font-bold py-3 rounded mt-6">
+      Confirmar Todas
+    </button>
+  </div>
+
+  <div *ngIf="!loading && jogadores.length === 0" class="text-center text-slate-400">Nenhum jogador</div>
+</div>

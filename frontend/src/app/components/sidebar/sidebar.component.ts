@@ -13,15 +13,18 @@ import { Router } from '@angular/router';
       <nav class="flex flex-col gap-4">
         <ng-container *ngIf="userType === 'player'; else teamMenu">
           <a routerLink="/profile" class="sidebar-link">Perfil</a>
-          <a routerLink="/history" class="sidebar-link">Histórico</a>
-          <a routerLink="/matches" class="sidebar-link">Matches</a>
-          <a routerLink="/applications" class="sidebar-link">Candidaturas</a>
+          <a routerLink="/profile/edit" class="sidebar-link">Editar Perfil</a>
+          <a routerLink="/vacancies" class="sidebar-link">Vagas Disponíveis</a>
+          <a routerLink="/matches" class="sidebar-link">Candidaturas</a>
+          <a routerLink="/historia-jogos" class="sidebar-link">Histórico de Jogos</a>
         </ng-container>
         <ng-template #teamMenu>
           <a routerLink="/dashboard" class="sidebar-link">Dashboard</a>
           <a routerLink="/publish-vacancy" class="sidebar-link">Publicar Vaga</a>
-          <a routerLink="/manage-team" class="sidebar-link">Gerenciar Equipe</a>
-          <a routerLink="/matches" class="sidebar-link">Matches</a>
+          <a routerLink="/edit-team" class="sidebar-link">Editar Time</a>
+          <a routerLink="/manage-roster" class="sidebar-link">Gerenciar Elenco</a>
+          <a routerLink="/registrar-jogo" class="sidebar-link">Registrar Jogo</a>
+          <a routerLink="/matches" class="sidebar-link">Candidaturas Recebidas</a>
         </ng-template>
         <button (click)="logout()" class="mt-8 w-full py-2 rounded-xl bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 text-gray-900 font-bold shadow hover:scale-105 transition">Sair</button>
       </nav>

@@ -1,0 +1,119 @@
+<div class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 p-4 md:p-8">
+  <!-- Header -->
+  <div class="mb-8">
+    <button (click)="goBack()" class="text-amber-400 hover:text-amber-300 mb-4 flex items-center gap-2 text-sm md:text-base">
+      <span>←</span>
+      <span>Voltar</span>
+    </button>
+    <h1 class="text-3xl md:text-4xl font-bold text-amber-400 mb-2">Registrar Jogo</h1>
+    <p class="text-slate-400 text-sm md:text-base">Registre um novo jogo para seu time</p>
+  </div>
+
+  <!-- Form Container -->
+  <div class="max-w-2xl mx-auto">
+    <!-- Erro -->
+    <div *ngIf="errorMessage" class="bg-red-900/30 border border-red-400/20 rounded-lg p-4 mb-6">
+      <p class="text-red-400 text-sm md:text-base">{{ errorMessage }}</p>
+    </div>
+
+    <!-- Sucesso -->
+    <div *ngIf="successMessage" class="bg-green-900/30 border border-green-400/20 rounded-lg p-4 mb-6">
+      <p class="text-green-400 text-sm md:text-base">{{ successMessage }}</p>
+    </div>
+
+    <!-- Form -->
+    <form [formGroup]="gameForm" (ngSubmit)="onSubmit()" class="space-y-6">
+      <!-- Data -->
+      <div>
+        <label class="block text-white font-semibold mb-2 text-sm md:text-base">Data do Jogo *</label>
+        <input type="date" 
+               formControlName="data"
+               class="w-full bg-slate-700/50 border border-amber-400/20 rounded-lg px-4 py-2 text-white placeholder-slate-500 focus:border-amber-400 focus:outline-none text-sm md:text-base"
+               required>
+        <p *ngIf="gameForm.get('data')?.invalid && gameForm.get('data')?.touched" class="text-red-400 text-xs md:text-sm mt-1">
+          Data é obrigatória
+        </p>
+      </div>
+
+      <!-- Horário -->
+      <div>
+        <label class="block text-white font-semibold mb-2 text-sm md:text-base">Horário *</label>
+        <input type="time" 
+               formControlName="hora"
+               class="w-full bg-slate-700/50 border border-amber-400/20 rounded-lg px-4 py-2 text-white placeholder-slate-500 focus:border-amber-400 focus:outline-none text-sm md:text-base"
+               required>
+        <p *ngIf="gameForm.get('hora')?.invalid && gameForm.get('hora')?.touched" class="text-red-400 text-xs md:text-sm mt-1">
+          Horário é obrigatório
+        </p>
+      </div>
+
+      <!-- Local -->
+      <div>
+        <label class="block text-white font-semibold mb-2 text-sm md:text-base">Local do Jogo *</label>
+        <input type="text" 
+               formControlName="local"
+               placeholder="Ex: Campo do Imigrantes, São Paulo"
+               class="w-full bg-slate-700/50 border border-amber-400/20 rounded-lg px-4 py-2 text-white placeholder-slate-500 focus:border-amber-400 focus:outline-none text-sm md:text-base"
+               required>
+        <p *ngIf="gameForm.get('local')?.invalid && gameForm.get('local')?.touched" class="text-red-400 text-xs md:text-sm mt-1">
+          Local é obrigatório
+        </p>
+      </div>
+
+      <!-- Seleção de Jogadores -->
+      <div>
+        <label class="block text-white font-semibold mb-4 text-sm md:text-base">
+          Selecione os Jogadores que Vão Jogar *
+          <span class="text-amber-400 text-xs md:text-sm">({{ selectedCount }} selecionados)</span>
+        </label>
+
+        <div *ngIf="loading" class="text-center py-8">
+          <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-slate-600 border-t-amber-400"></div>
+          <p class="text-slate-400 mt-2 text-sm md:text-base">Carregando jogadores...</p>
+        </div>
+
+        <div *ngIf="!loading && candidatos.length === 0" class="bg-slate-700/30 border border-amber-400/20 rounded-lg p-6 text-center">
+          <p class="text-slate-400 text-sm md:text-base">Nenhum jogador disponível. Aceite candidatos primeiro em "Gerenciar Elenco".</p>
+        </div>
+
+        <div *ngIf="!loading && candidatos.length > 0" class="grid gap-3">
+          <div *ngFor="let candidato of candidatos" 
+               class="bg-gradient-to-r from-slate-800/50 to-slate-700/50 border border-amber-400/20 rounded-lg p-4 hover:border-amber-400/40 transition cursor-pointer"
+               (click)="toggleCandidato(candidato)">
+            
+            <div class="flex items-center gap-4">
+              <!-- Checkbox -->
+              <input type="checkbox" 
+                     [checked]="candidato.checked"
+                     (change)="toggleCandidato(candidato)"
+                     class="w-5 h-5 accent-amber-400 cursor-pointer flex-shrink-0">
+              
+              <!-- Info -->
+              <div class="flex-1 min-w-0">
+                <div class="text-white font-semibold text-sm md:text-base truncate">{{ candidato.nome }}</div>
+                <div class="text-amber-400 text-xs md:text-sm">{{ candidato.posicao }} • {{ candidato.idade }} anos</div>
+              </div>
+
+              <!-- Badge se selecionado -->
+              <div *ngIf="candidato.checked" class="bg-amber-500 text-black px-3 py-1 rounded-full text-xs md:text-sm font-semibold flex-shrink-0">
+                ✓ Ok
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" 
+              [disabled]="submitting || !gameForm.valid || selectedCount === 0"
+              class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 disabled:from-slate-600 disabled:to-slate-600 disabled:opacity-50 text-black font-bold py-3 rounded-lg transition transform hover:scale-105 text-sm md:text-base"
+              [ngClass]="{ 'opacity-50 cursor-not-allowed': submitting }">
+        <span *ngIf="!submitting">Registrar Jogo ({{ selectedCount }} jogadores)</span>
+        <span *ngIf="submitting" class="flex items-center justify-center gap-2">
+          <div class="animate-spin rounded-full h-4 w-4 border-2 border-black border-t-transparent"></div>
+          Registrando...
+        </span>
+      </button>
+    </form>
+  </div>
+</div>

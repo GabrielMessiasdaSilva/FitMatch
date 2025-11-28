@@ -26,6 +26,7 @@ export class AuthService {
           localStorage.setItem('token', res.token);
           localStorage.setItem('user_type', res.user.type);
           localStorage.setItem('user_id', res.user.id);
+          localStorage.setItem('user_email', res.user.email);
         }
       })
     );
@@ -40,6 +41,7 @@ export class AuthService {
       localStorage.removeItem('token');
       localStorage.removeItem('user_type');
       localStorage.removeItem('user_id');
+      localStorage.removeItem('user_email');
     }
     this.router.navigate(['/login']);
   }
@@ -63,5 +65,12 @@ export class AuthService {
       return null;
     }
     return localStorage.getItem('user_id');
+  }
+
+  getUserEmail(): string | null {
+    if (!this.isBrowser) {
+      return null;
+    }
+    return localStorage.getItem('user_email');
   }
 }

@@ -7,167 +7,40 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-register',
   template: `
-    <div class="register-page fade-in">
-      
-      <div class="title-area">
-        <h1>Crie sua conta</h1>
-        <p>Entre para o FITMATCH e ache seu time ideal.</p>
+    <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800">
+      <div class="w-full max-w-lg bg-gray-950 rounded-3xl shadow-2xl border-2 border-yellow-400/40 p-10 flex flex-col gap-8 animate-fade-in">
+        <div class="flex flex-col items-center mb-2">
+          <svg class="w-16 h-16 mb-2" fill="none" viewBox="0 0 64 64"><circle cx="32" cy="32" r="32" fill="#FFD600"/><path d="M32 18a10 10 0 0 1 10 10v2a10 10 0 0 1-20 0v-2a10 10 0 0 1 10-10z" fill="#23232b"/><path d="M22 40c0-3.314 4.477-6 10-6s10 2.686 10 6v2H22v-2z" fill="#23232b"/></svg>
+          <h2 class="text-4xl font-extrabold text-yellow-400 text-center drop-shadow mb-1">Crie sua Conta</h2>
+          <p class="text-gray-300 text-center text-base">Junte-se ao FitMatch e encontre seu time ou jogador ideal!</p>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="submit()" class="flex flex-col gap-5">
+          <div>
+            <label class="block text-sm font-semibold text-gray-200 mb-1">Tipo de Conta</label>
+            <select formControlName="type" class="w-full px-4 py-2 rounded-xl bg-gray-900 text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition">
+              <option value="player">Jogador</option>
+              <option value="team">Time</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-200 mb-1">Email</label>
+            <input formControlName="email" type="email" class="w-full px-4 py-2 rounded-xl bg-gray-900 text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition placeholder:text-gray-500" placeholder="Seu email" />
+            <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="text-xs text-red-400 mt-1">Email inválido</div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-200 mb-1">Senha</label>
+            <input formControlName="password" type="password" class="w-full px-4 py-2 rounded-xl bg-gray-900 text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition placeholder:text-gray-500" placeholder="Sua senha" />
+            <div *ngIf="form.get('password')?.invalid && form.get('password')?.touched" class="text-xs text-red-400 mt-1">Senha obrigatória</div>
+          </div>
+          <button type="submit" [disabled]="form.invalid" class="w-full py-3 rounded-xl bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 text-gray-900 font-bold text-lg shadow-lg hover:scale-105 hover:bg-yellow-500 transition disabled:opacity-50 disabled:cursor-not-allowed">Criar Conta</button>
+        </form>
+        <div class="flex justify-center mt-2">
+          <a routerLink="/login" class="text-yellow-400 hover:underline font-semibold text-base">Já tenho conta</a>
+        </div>
       </div>
-
-      <mat-card class="form-card glass">
-
-        <mat-card-title class="form-title">
-          ✨ Cadastro FITMATCH
-        </mat-card-title>
-
-        <mat-card-content>
-          <form [formGroup]="form" (ngSubmit)="submit()">
-
-            <mat-form-field appearance="outline" class="full-width">
-              <mat-label>Tipo de Conta</mat-label>
-              <mat-select formControlName="type">
-                <mat-option value="player">Jogador</mat-option>
-                <mat-option value="team">Time</mat-option>
-              </mat-select>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline" class="full-width">
-              <mat-label>Email</mat-label>
-              <input matInput formControlName="email" type="email" autocomplete="off">
-            </mat-form-field>
-
-            <mat-form-field appearance="outline" class="full-width">
-              <mat-label>Senha</mat-label>
-              <input matInput formControlName="password" type="password">
-            </mat-form-field>
-
-            <button mat-raised-button color="primary" class="submit-btn" [disabled]="form.invalid">
-              Criar Conta
-            </button>
-          </form>
-        </mat-card-content>
-
-        <mat-card-actions class="actions">
-          <a routerLink="/login" class="login-link">Já tenho conta</a>
-        </mat-card-actions>
-
-      </mat-card>
-
     </div>
   `,
-  styles: [`
-
-    /* ====== PÁGINA ====== */
-    .register-page {
-      height: 92vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background: linear-gradient(135deg, #0e0e0e, #1a1a1a 50%, #141414);
-    }
-
-    /* ====== TÍTULO ====== */
-    .title-area {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .title-area h1 {
-      margin: 0;
-      font-size: 2.4rem;
-      font-weight: 800;
-      background: linear-gradient(90deg, #FFD600, #FF0066);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .title-area p {
-      margin-top: 6px;
-      color: #ccc;
-      font-size: 15px;
-    }
-
-    /* ====== CARD DO FORM ====== */
-    .form-card {
-      width: 400px;
-      padding: 26px;
-      border-radius: 18px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-    }
-
-    /* Efeito glass */
-    .glass {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      backdrop-filter: blur(12px);
-    }
-
-    .form-title {
-      text-align: center;
-      font-weight: 700;
-      font-size: 1.3rem;
-      margin-bottom: 14px;
-      color: #fff;
-    }
-
-    /* ====== INPUTS ====== */
-    .full-width {
-      width: 100%;
-      margin-bottom: 14px;
-    }
-
-    mat-form-field {
-      color: #fff !important;
-    }
-
-    /* ====== BOTÃO ====== */
-    .submit-btn {
-      width: 100%;
-      padding: 10px 0;
-      font-weight: 700;
-      letter-spacing: 1px;
-      border-radius: 10px;
-      font-size: 15px;
-      background: linear-gradient(90deg, #009739, #00c851);
-      color: white;
-      transition: 0.25s;
-    }
-
-    .submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 14px rgba(0,255,100,0.35);
-    }
-
-    /* ====== LINK LOGIN ====== */
-    .actions {
-      justify-content: center;
-      padding-top: 8px;
-    }
-
-    .login-link {
-      color: #FFD600;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-
-    .login-link:hover {
-      text-decoration: underline;
-    }
-
-    /* ====== ANIMAÇÃO ====== */
-    .fade-in {
-      animation: fadeIn .5s ease-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-  `]
+  styles: [`.animate-fade-in { animation: fadeIn 0.7s ease; } @keyframes fadeIn { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: none; } }`]
 })
 export class RegisterComponent {
   form: FormGroup;

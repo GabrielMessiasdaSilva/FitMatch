@@ -21,4 +21,9 @@ export class MatchesService {
   getMyMatches(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/my-matches`);
   }
+
+  // Retorna todas as solicitações (para dashboard/admin)
+  getAll(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
+  }
 }

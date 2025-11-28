@@ -8,222 +8,58 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-players',
   template: `
-    <div class="players-page">
-
-  <div class="header">
-    <h1>Encontrar Jogadores</h1>
-    <p class="subtitle">Filtre e encontre atletas perto de você</p>
-  </div>
-
-  <form class="filter-card" [formGroup]="filterForm">
-    
-    <mat-form-field appearance="outline">
-      <mat-label>Posição</mat-label>
-      <input matInput formControlName="position" placeholder="Ex: Atacante">
-      <mat-icon matSuffix>sports</mat-icon>
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Bairro</mat-label>
-      <input matInput formControlName="neighborhood" placeholder="Ex: Mooca">
-      <mat-icon matSuffix>location_on</mat-icon>
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Esporte</mat-label>
-      <input matInput formControlName="sport" placeholder="Ex: Futebol">
-      <mat-icon matSuffix>stadium</mat-icon>
-    </mat-form-field>
-
-    <button mat-raised-button color="primary" class="filter-btn" (click)="loadPlayers()">
-      Filtrar
-    </button>
-
-  </form>
-
-  <div class="card-grid">
-
-    <mat-card class="player-card" *ngFor="let player of players">
-
-      <mat-card-header>
-        <div mat-card-avatar class="avatar">
-          {{ player.name?.charAt(0).toUpperCase() }}
+    <div class="min-h-screen p-6 bg-gradient-to-br from-slate-900 via-slate-800 to-black text-slate-100">
+      <div class="max-w-6xl mx-auto">
+        <div *ngIf="userType !== 'team'" class="text-center py-24">
+          <h2 class="text-2xl font-bold text-amber-400 mb-4">Acesso restrito</h2>
+          <p class="text-slate-400 text-lg">A busca de jogadores só pode ser feita por times.</p>
         </div>
-        <mat-card-title>{{ player.name }}</mat-card-title>
-        <mat-card-subtitle>{{ player.neighborhood }}</mat-card-subtitle>
-      </mat-card-header>
-
-      <mat-card-content>
-        <p><mat-icon>person</mat-icon> <strong>Posição:</strong> {{ player.position }}</p>
-        <p><mat-icon>sports_soccer</mat-icon> <strong>Esportes:</strong> {{ player.sports?.join(', ') }}</p>
-        <p><mat-icon>calendar_month</mat-icon> <strong>Idade:</strong> {{ player.age }}</p>
-      </mat-card-content>
-
-      <mat-card-actions *ngIf="userType === 'team'">
-        <button mat-stroked-button color="accent" (click)="invitePlayer(player.id)">
-          <mat-icon>send</mat-icon> Convidar
-        </button>
-      </mat-card-actions>
-
-    </mat-card>
-
-  </div>
-
-</div>
-
+        <div *ngIf="userType === 'team'">
+          <div class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-amber-400 mb-2">Encontrar Jogadores</h1>
+            <p class="text-slate-400 text-lg">Filtre e encontre atletas perto de você</p>
+          </div>
+          <form class="flex flex-wrap gap-4 mb-10 items-end bg-slate-800 p-4 rounded-xl border border-slate-700 shadow-lg" [formGroup]="filterForm">
+            <div class="flex-1 min-w-[180px]">
+              <label class="block text-sm font-semibold mb-1 text-amber-300">Posição</label>
+              <input formControlName="position" class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Ex: Atacante" />
+            </div>
+            <div class="flex-1 min-w-[180px]">
+              <label class="block text-sm font-semibold mb-1 text-amber-300">Bairro</label>
+              <input formControlName="neighborhood" class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Ex: Mooca" />
+            </div>
+            <div class="flex-1 min-w-[180px]">
+              <label class="block text-sm font-semibold mb-1 text-amber-300">Esporte</label>
+              <input formControlName="sport" class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Ex: Futebol" />
+            </div>
+            <button type="button" (click)="loadPlayers()" class="px-6 py-2 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold shadow transition">Filtrar</button>
+          </form>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div *ngFor="let player of players" class="bg-gradient-to-br from-slate-900 via-slate-800 to-black rounded-xl border border-slate-700 shadow-lg p-0 flex flex-col hover:scale-[1.03] transition">
+              <div class="flex items-center gap-4 p-5 border-b border-slate-700">
+                <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-amber-400 to-indigo-400 flex items-center justify-center text-xl font-extrabold text-slate-900">{{ player.name?.charAt(0).toUpperCase() }}</div>
+                <div>
+                  <div class="text-lg font-bold text-amber-400">{{ player.name }}</div>
+                  <div class="text-xs text-slate-400">{{ player.neighborhood }}</div>
+                </div>
+              </div>
+              <div class="p-5 flex-1">
+                <div class="mb-2 text-sm"><span class="font-bold text-amber-300">Posição:</span> <span class="text-slate-100">{{ player.position }}</span></div>
+                <div class="mb-2 text-sm"><span class="font-bold text-amber-300">Esportes:</span> <span class="text-slate-100">{{ player.sports?.join(', ') }}</span></div>
+                <div class="text-sm"><span class="font-bold text-amber-300">Idade:</span> <span class="text-slate-100">{{ player.age }}</span></div>
+              </div>
+              <div class="p-5 border-t border-slate-700 flex justify-end">
+                <button *ngIf="userType === 'team'" (click)="invitePlayer(player.id)" class="px-4 py-2 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold shadow transition flex items-center gap-2">
+                  <span class="material-icons text-base">send</span> Convidar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   `,
-  styles: [`
-.players-page {
-  padding: 24px 32px;
-  animation: fadeIn .4s ease-in-out;
-}
-
-/* ===== HEADER ===== */
-.header {
-  text-align: center;
-  margin-bottom: 28px;
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 34px;
-  font-weight: 800;
-  color: #1b1b1b;
-}
-
-.header .subtitle {
-  margin-top: 6px;
-  color: #555;
-  font-size: 15px;
-}
-
-/* ===== FILTER CARD ===== */
-.filter-card {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 22px;
-  background: #ffffff;
-  border-radius: 16px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
-  margin-bottom: 34px;
-}
-
-.filter-card mat-form-field {
-  width: 100%;
-}
-
-/* Botão */
-.filter-btn {
-  height: 56px;
-  font-size: 15px;
-  font-weight: 700;
-  border-radius: 10px;
-  letter-spacing: .3px;
-}
-
-/* ===== GRID ===== */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 26px;
-}
-
-/* ===== PLAYER CARD ===== */
-.player-card {
-  background: linear-gradient(180deg, #fff 0%, #fafafa 100%) !important;
-  border-radius: 18px !important;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 8px 18px rgba(0,0,0,.06);
-  transition: .25s ease;
-}
-
-.player-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 26px rgba(0,0,0,.10);
-}
-
-/* ===== HEADER DO CARD ===== */
-.player-card mat-card-header {
-  padding: 18px 22px;
-  border-bottom: 1px solid #f0f0f0;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-/* Avatar premium */
-.player-card .avatar {
-  background: #00308F;
-  color: #FFDD00;
-  width: 54px;
-  height: 54px;
-  font-size: 22px;
-  border-radius: 14px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-weight: 800;
-  box-shadow: inset 0 0 10px rgba(255,255,255,0.25);
-}
-
-/* Título e subtítulo */
-.player-card mat-card-title {
-  font-size: 21px;
-  font-weight: 800;
-  color: #ffffffff !important;
-}
-
-.player-card mat-card-subtitle {
-  font-size: 13.5px;
-  color: #606060 !important;
-  margin-top: -2px;
-}
-
-/* ===== CONTENT ===== */
-.player-card mat-card-content {
-  padding: 18px 22px;
-  color: #afa8a8ff;
-}
-
-.player-card mat-card-content p {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 6px 0;
-  font-size: 14.5px;
-}
-
-/* Ícones minimalistas */
-.player-card mat-card-content mat-icon {
-  font-size: 20px;
-  color: #3f51b5;
-}
-
-/* ===== AÇÕES ===== */
-.player-card mat-card-actions {
-  padding-left: 18px;
-  padding-bottom: 18px;
-}
-
-/* Botão do convite */
-.player-card button[mat-stroked-button] {
-  border-radius: 10px;
-  font-weight: 700;
-  text-transform: none;
-  letter-spacing: .3px;
-}
-
-/* ===== ANIMAÇÃO ===== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-  `]
+  styles: []
 })
 export class PlayersComponent implements OnInit {
   players: any[] = [];

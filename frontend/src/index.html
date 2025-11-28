@@ -1,15 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="utf-8">
-  <title>Frontend</title>
+  <title>FITMATCH</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Tailwind CDN para prototipagem rápida (para produção, recomenda-se instalar via npm) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#0ea5a4', accent: '#ff0066' } } } }</script>
 </head>
-<body class="mat-typography">
+<body class="antialiased bg-gradient-to-br from-slate-900 via-slate-800 to-black text-slate-100 font-inter">
   <app-root></app-root>
 </body>
 </html>

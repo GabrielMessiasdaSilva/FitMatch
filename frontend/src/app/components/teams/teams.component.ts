@@ -8,163 +8,42 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-teams',
   template: `
-    <div class="container">
-      <h2>Encontrar Times</h2>
-
-      <div class="filter-container" [formGroup]="filterForm">
-        <mat-form-field appearance="outline">
-          <mat-label>Bairro</mat-label>
-          <input matInput formControlName="neighborhood">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Esporte</mat-label>
-          <input matInput formControlName="sport">
-        </mat-form-field>
-        <button mat-raised-button color="primary" (click)="loadTeams()">Filtrar</button>
-      </div>
-
-      <div class="card-grid">
-        <mat-card *ngFor="let team of teams">
-          <mat-card-header>
-            <div mat-card-avatar class="avatar-placeholder">{{team.name?.charAt(0)}}</div>
-            <mat-card-title>{{team.name || 'Sem Nome'}}</mat-card-title>
-            <mat-card-subtitle>{{team.sport}} - {{team.neighborhood}}</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <p><strong>Vagas:</strong> {{team.neededPositions?.join(', ')}}</p>
-            <p><strong>Elenco:</strong> {{team.roster?.length || 0}} jogadores</p>
-          </mat-card-content>
-          <mat-card-actions align="end">
-            <button mat-flat-button color="primary" *ngIf="userType === 'player'" (click)="apply(team.id)">Candidatar-se</button>
-          </mat-card-actions>
-        </mat-card>
+    <div class="min-h-screen p-6 bg-gradient-to-br from-slate-900 via-slate-800 to-black text-slate-100">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-extrabold mb-6 text-amber-400">Encontrar Times</h2>
+        <form class="flex flex-wrap gap-4 mb-8 items-end bg-slate-800 p-4 rounded-xl border border-slate-700 shadow-lg" [formGroup]="filterForm">
+          <div class="flex-1 min-w-[220px]">
+            <label class="block text-sm font-semibold mb-1 text-amber-300">Bairro</label>
+            <input formControlName="neighborhood" class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Digite o bairro" />
+          </div>
+          <div class="flex-1 min-w-[220px]">
+            <label class="block text-sm font-semibold mb-1 text-amber-300">Esporte</label>
+            <input formControlName="sport" class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Digite o esporte" />
+          </div>
+          <button type="button" (click)="loadTeams()" class="px-6 py-2 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold shadow transition">Filtrar</button>
+        </form>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div *ngFor="let team of teams" class="bg-gradient-to-br from-slate-900 via-slate-800 to-black rounded-xl border border-slate-700 shadow-lg p-0 flex flex-col">
+            <div class="flex items-center gap-4 p-5 border-b border-slate-700">
+              <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-amber-400 to-indigo-400 flex items-center justify-center text-xl font-extrabold text-slate-900">{{team.name?.charAt(0)}}</div>
+              <div>
+                <div class="text-lg font-bold text-amber-400">{{team.name || 'Sem Nome'}}</div>
+                <div class="text-xs text-slate-400">{{team.sport}} - {{team.neighborhood}}</div>
+              </div>
+            </div>
+            <div class="p-5 flex-1">
+              <div class="mb-2 text-sm"><span class="font-bold text-amber-300">Vagas:</span> <span class="text-slate-100">{{team.neededPositions?.join(', ') || 'Nenhuma'}}</span></div>
+              <div class="text-sm"><span class="font-bold text-indigo-300">Elenco:</span> <span class="text-slate-100">{{team.roster?.length || 0}} jogadores</span></div>
+            </div>
+            <div class="p-5 border-t border-slate-700 flex justify-end">
+              <button *ngIf="userType === 'player'" (click)="apply(team.id)" class="px-4 py-2 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold shadow transition">Candidatar-se</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   `,
-  styles: [`
-/* ====== Container ====== */
-.container {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  animation: fadeIn .4s ease-in-out;
-}
-
-h2 {
-  font-size: 32px;
-  font-weight: 800;
-  color: #1b1b1b;
-}
-
-/* ====== Filtros ====== */
-.filter-container {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-mat-form-field {
-  width: 220px;
-}
-
-/* ====== GRID ====== */
-.card-grid {
-  display: grid;
-  gap: 28px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-}
-
-/* ====== CARD – FINTECH PREMIUM ====== */
-mat-card {
-  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%) !important;
-  border-radius: 18px !important;
-  border: 1px solid #e3e6ea;
-  padding: 0;
-
-  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
-  transition: .25s ease;
-}
-
-mat-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
-}
-
-/* ====== HEADER ====== */
-mat-card-header {
-  padding: 18px 22px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-/* Avatar estilo “app sério” */
-.avatar-placeholder {
-  background: #3f51b5;
-  color: white;
-
-  width: 52px;
-  height: 52px;
-  font-size: 20px;
-  font-weight: 700;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 14px;
-  box-shadow: inset 0 0 10px rgba(255,255,255,0.25);
-}
-
-/* Títulos do card */
-mat-card-title {
-  font-size: 21px;
-  font-weight: 800;
-  color: #111 !important;
-}
-
-mat-card-subtitle {
-  margin-top: -2px;
-  font-size: 13.5px;
-  color: #606060 !important;
-  font-weight: 500;
-}
-
-/* ====== Conteúdo ====== */
-mat-card-content {
-  padding: 18px 22px;
-}
-
-mat-card-content p {
-  margin: 6px 0;
-  font-size: 14.5px;
-  color: #222;
-}
-
-mat-card-content p strong {
-  color: #000;
-  font-weight: 700;
-}
-
-/* ====== Botão ====== */
-button[mat-flat-button] {
-  border-radius: 10px;
-  font-weight: 700;
-  padding: 8px 14px;
-  letter-spacing: .3px;
-}
-
-/* ====== Animação ====== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-
-  `]
+  styles: []
 })
 export class TeamsComponent implements OnInit {
   teams: any[] = [];

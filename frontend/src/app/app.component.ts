@@ -27,7 +27,7 @@ import { AuthService } from './services/auth.service';
       <app-sidebar></app-sidebar>
     </ng-container>
     <!-- MAIN -->
-    <main class="flex-1 ml-0 md:ml-64">
+    <main class="flex-1 ml-0 md:ml-256">
       <router-outlet></router-outlet>
     </main>
   </div>

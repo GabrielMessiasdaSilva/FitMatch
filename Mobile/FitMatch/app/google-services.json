@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "84447409228",
+    "project_id": "fitmatch-dd6e6",
+    "storage_bucket": "fitmatch-dd6e6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84447409228:android:994c5ffba90bed1b6d70e9",
+        "android_client_info": {
+          "package_name": "com.fitmatch.mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeGAc8D0YQJrkkIut1ACQn_tUmmso0YGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

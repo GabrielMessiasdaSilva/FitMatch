@@ -4,7 +4,7 @@
             "outputFile": "com.fitmatch.mobile.app-mergeDebugResources-52:/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jpsil\\.gradle\\caches\\transforms-4\\8e3eaa878e88caaae8b0e13ca354a13e\\transformed\\browser-1.4.0\\res\\values-pt\\values-pt.xml",
+                    "source": "C:\\Users\\Diogo\\.gradle\\caches\\transforms-4\\8e3eaa878e88caaae8b0e13ca354a13e\\transformed\\browser-1.4.0\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jpsil\\.gradle\\caches\\transforms-4\\4fcfe54b42279d5bf3b010281fdac5c8\\transformed\\jetified-ui-release\\res\\values-pt\\values-pt.xml",
+                    "source": "C:\\Users\\Diogo\\.gradle\\caches\\transforms-4\\4fcfe54b42279d5bf3b010281fdac5c8\\transformed\\jetified-ui-release\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jpsil\\.gradle\\caches\\transforms-4\\a1ac29df23bd44bd9ccc44fe16eeab5e\\transformed\\core-1.12.0\\res\\values-pt\\values-pt.xml",
+                    "source": "C:\\Users\\Diogo\\.gradle\\caches\\transforms-4\\a1ac29df23bd44bd9ccc44fe16eeab5e\\transformed\\core-1.12.0\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -55,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jpsil\\.gradle\\caches\\transforms-4\\e28b893294778398b39530cd1371565a\\transformed\\jetified-material3-1.1.0\\res\\values-pt\\values-pt.xml",
+                    "source": "C:\\Users\\Diogo\\.gradle\\caches\\transforms-4\\e28b893294778398b39530cd1371565a\\transformed\\jetified-material3-1.1.0\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -4,7 +4,7 @@
             "outputFile": "com.fitmatch.mobile.app-mergeDebugResources-52:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jpsil\\.gradle\\caches\\transforms-4\\a1ac29df23bd44bd9ccc44fe16eeab5e\\transformed\\core-1.12.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Diogo\\.gradle\\caches\\transforms-4\\a1ac29df23bd44bd9ccc44fe16eeab5e\\transformed\\core-1.12.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

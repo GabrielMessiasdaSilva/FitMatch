@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="@color/fit_black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_profile"
+        android:text="Meu Perfil"
+        android:backgroundTint="@color/fit_yellow"
+        android:textColor="@color/fit_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_teams"
+        android:text="Times Próximos"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/fit_yellow"
+        android:textColor="@color/fit_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_history"
+        android:text="Histórico"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/fit_yellow"
+        android:textColor="@color/fit_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

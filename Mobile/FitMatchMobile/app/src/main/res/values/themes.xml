@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.FitMatch" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/fit_yellow</item>
+        <item name="colorSecondary">@color/fit_yellow</item>
+
+        <item name="android:statusBarColor">@color/fit_black</item>
+
+        <item name="android:windowBackground">@color/fit_black</item>
+
+        <item name="android:navigationBarColor">@color/fit_black</item>
+    </style>
+
+</resources>

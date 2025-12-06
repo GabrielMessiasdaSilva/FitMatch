@@ -1,0 +1,7 @@
+<resources>
+    <color name="fit_black">#101010</color>
+    <color name="fit_gray_dark">#1A1A1A</color>
+    <color name="fit_gray">#2A2A2A</color>
+    <color name="fit_yellow">#F8C015</color>
+    <color name="fit_white">#FFFFFF</color>
+</resources>

@@ -1,0 +1,27 @@
+R_DEF: Internal format may change without notice
+local
+id btn_apply
+id btn_confirm
+id btn_history
+id btn_invite
+id btn_profile
+id btn_save
+id btn_teams
+id et_age
+id et_name
+id et_position
+id rv_history
+id rv_teams
+id tv_dist
+id tv_name
+id tv_team_desc
+id tv_team_title
+layout activity_history
+layout activity_main
+layout activity_profile
+layout activity_team_detail
+layout activity_teams
+layout item_team
+mipmap ic_launcher
+mipmap ic_launcher_round
+style Theme.FitMatch

@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-debug-52:\\layout_item_team.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-main-54:\\layout\\item_team.xml"
+    },
+    {
+        "merged": "com.fitmatch.mobile.app-debug-52:/layout_activity_history.xml.flat",
+        "source": "com.fitmatch.mobile.app-main-54:/layout/activity_history.xml"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-debug-52:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-main-54:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-debug-52:\\mipmap_ic_launcher.png.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-main-54:\\mipmap\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-debug-52:\\layout_activity_team_detail.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-main-54:\\layout\\activity_team_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-debug-52:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-main-54:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "com.fitmatch.mobile.app-debug-52:/layout_item_avaliacao.xml.flat",
+        "source": "com.fitmatch.mobile.app-main-54:/layout/item_avaliacao.xml"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-debug-52:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-main-54:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-debug-52:\\drawable_fit_input.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-main-54:\\drawable\\fit_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-debug-52:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-main-54:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-debug-52:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-main-54:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-debug-52:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-main-54:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-debug-52:\\mipmap_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-main-54:\\mipmap\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-debug-52:\\layout_activity_history.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-main-54:\\layout\\activity_history.xml"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-debug-52:\\layout_activity_teams.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.13\\com.fitmatch.mobile.app-main-54:\\layout\\activity_teams.xml"
+    }
+]

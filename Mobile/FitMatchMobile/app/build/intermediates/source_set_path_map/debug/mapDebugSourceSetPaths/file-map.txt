@@ -1,0 +1,56 @@
+com.fitmatch.mobile.app-sqlite-2.4.0-0 C:\Users\jpsil\.gradle\caches\8.13\transforms\014fb6baf3581d54eb1d78dc28b80718\transformed\sqlite-2.4.0\res
+com.fitmatch.mobile.app-jetified-room-ktx-2.6.1-1 C:\Users\jpsil\.gradle\caches\8.13\transforms\03a02a8f573cd212669b4c5cc24c092d\transformed\jetified-room-ktx-2.6.1\res
+com.fitmatch.mobile.app-jetified-activity-ktx-1.9.1-2 C:\Users\jpsil\.gradle\caches\8.13\transforms\0632fe0349467dde9e794992e15d06c1\transformed\jetified-activity-ktx-1.9.1\res
+com.fitmatch.mobile.app-recyclerview-1.3.2-3 C:\Users\jpsil\.gradle\caches\8.13\transforms\08f6bea3723bf5a977eca529af7abd5b\transformed\recyclerview-1.3.2\res
+com.fitmatch.mobile.app-jetified-customview-poolingcontainer-1.0.0-4 C:\Users\jpsil\.gradle\caches\8.13\transforms\0c1b7b0bfe3cf7ed3af0262ffd12b79e\transformed\jetified-customview-poolingcontainer-1.0.0\res
+com.fitmatch.mobile.app-jetified-credentials-1.2.0-rc01-5 C:\Users\jpsil\.gradle\caches\8.13\transforms\0dbec9ef79fcd11144e6928635157db5\transformed\jetified-credentials-1.2.0-rc01\res
+com.fitmatch.mobile.app-jetified-viewpager2-1.1.0-beta02-6 C:\Users\jpsil\.gradle\caches\8.13\transforms\13c841a3e0c1055dedf5f77da8364952\transformed\jetified-viewpager2-1.1.0-beta02\res
+com.fitmatch.mobile.app-jetified-emoji2-1.3.0-7 C:\Users\jpsil\.gradle\caches\8.13\transforms\1de64d83e09e23883f235acd947e7724\transformed\jetified-emoji2-1.3.0\res
+com.fitmatch.mobile.app-browser-1.4.0-8 C:\Users\jpsil\.gradle\caches\8.13\transforms\1e6fc7c7b7959b7d47c1de326e010791\transformed\browser-1.4.0\res
+com.fitmatch.mobile.app-jetified-lifecycle-process-2.7.0-9 C:\Users\jpsil\.gradle\caches\8.13\transforms\25d78e0bb82468f5021fe8a17885da1e\transformed\jetified-lifecycle-process-2.7.0\res
+com.fitmatch.mobile.app-jetified-play-services-base-18.0.1-10 C:\Users\jpsil\.gradle\caches\8.13\transforms\263acd44320f3cc135e6f682db305ddd\transformed\jetified-play-services-base-18.0.1\res
+com.fitmatch.mobile.app-jetified-savedstate-1.2.1-11 C:\Users\jpsil\.gradle\caches\8.13\transforms\27e00241f3aac20ccb051d6c75d2893d\transformed\jetified-savedstate-1.2.1\res
+com.fitmatch.mobile.app-core-1.13.0-12 C:\Users\jpsil\.gradle\caches\8.13\transforms\295b8150c007ace69ffbe90c3bfad77d\transformed\core-1.13.0\res
+com.fitmatch.mobile.app-jetified-play-services-basement-18.3.0-13 C:\Users\jpsil\.gradle\caches\8.13\transforms\2b075d9236e4c1d69593bb3167addff5\transformed\jetified-play-services-basement-18.3.0\res
+com.fitmatch.mobile.app-jetified-fragment-ktx-1.6.2-14 C:\Users\jpsil\.gradle\caches\8.13\transforms\3b0786878c9cd7c7e8e17d6501f26ba7\transformed\jetified-fragment-ktx-1.6.2\res
+com.fitmatch.mobile.app-cardview-1.0.0-15 C:\Users\jpsil\.gradle\caches\8.13\transforms\4d48eb7d58142df3f19904c5b52522f5\transformed\cardview-1.0.0\res
+com.fitmatch.mobile.app-drawerlayout-1.1.1-16 C:\Users\jpsil\.gradle\caches\8.13\transforms\55e7d25d0d8ee097dc6b75f9c126c9e3\transformed\drawerlayout-1.1.1\res
+com.fitmatch.mobile.app-jetified-profileinstaller-1.4.0-17 C:\Users\jpsil\.gradle\caches\8.13\transforms\5933746ab87a680a16fe17fb1c547063\transformed\jetified-profileinstaller-1.4.0\res
+com.fitmatch.mobile.app-jetified-lifecycle-runtime-ktx-2.7.0-18 C:\Users\jpsil\.gradle\caches\8.13\transforms\5babf25c02f73656a4dda4b19b63b61e\transformed\jetified-lifecycle-runtime-ktx-2.7.0\res
+com.fitmatch.mobile.app-lifecycle-livedata-2.7.0-19 C:\Users\jpsil\.gradle\caches\8.13\transforms\60b3f4f7ca8e9f1d3d245421e6390273\transformed\lifecycle-livedata-2.7.0\res
+com.fitmatch.mobile.app-material-1.11.0-20 C:\Users\jpsil\.gradle\caches\8.13\transforms\62ba424538c181391ef9dc58fe2117d8\transformed\material-1.11.0\res
+com.fitmatch.mobile.app-lifecycle-runtime-2.7.0-21 C:\Users\jpsil\.gradle\caches\8.13\transforms\64db942ed603a4eb357005242a1e95b2\transformed\lifecycle-runtime-2.7.0\res
+com.fitmatch.mobile.app-jetified-play-services-auth-20.7.0-22 C:\Users\jpsil\.gradle\caches\8.13\transforms\6608eec9929cd449dfa59f962b58d5c3\transformed\jetified-play-services-auth-20.7.0\res
+com.fitmatch.mobile.app-coordinatorlayout-1.1.0-23 C:\Users\jpsil\.gradle\caches\8.13\transforms\6ef31d9b25e3d73fb08fa4b46328af00\transformed\coordinatorlayout-1.1.0\res
+com.fitmatch.mobile.app-room-runtime-2.6.1-24 C:\Users\jpsil\.gradle\caches\8.13\transforms\6fc659fc62f837aef55e5efee9e93f80\transformed\room-runtime-2.6.1\res
+com.fitmatch.mobile.app-jetified-appcompat-resources-1.7.0-25 C:\Users\jpsil\.gradle\caches\8.13\transforms\724c9a85243d3e3a62bf4dcde3172a9e\transformed\jetified-appcompat-resources-1.7.0\res
+com.fitmatch.mobile.app-sqlite-framework-2.4.0-26 C:\Users\jpsil\.gradle\caches\8.13\transforms\7283625b68c796a41cad7497d563a0ec\transformed\sqlite-framework-2.4.0\res
+com.fitmatch.mobile.app-transition-1.2.0-27 C:\Users\jpsil\.gradle\caches\8.13\transforms\728b4e152fbfc82dc4756185ea8755cf\transformed\transition-1.2.0\res
+com.fitmatch.mobile.app-jetified-emoji2-views-helper-1.3.0-28 C:\Users\jpsil\.gradle\caches\8.13\transforms\774c9af2d710e20d0ad58884258ac70e\transformed\jetified-emoji2-views-helper-1.3.0\res
+com.fitmatch.mobile.app-fragment-1.6.2-29 C:\Users\jpsil\.gradle\caches\8.13\transforms\77ff1b33a9d6ba0832ce0398dc8fe453\transformed\fragment-1.6.2\res
+com.fitmatch.mobile.app-jetified-lifecycle-livedata-ktx-2.7.0-30 C:\Users\jpsil\.gradle\caches\8.13\transforms\8003d5805ca1707a394d0df4027eaea7\transformed\jetified-lifecycle-livedata-ktx-2.7.0\res
+com.fitmatch.mobile.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-31 C:\Users\jpsil\.gradle\caches\8.13\transforms\90bd56f94e3dcae10a60a18d41ff70a1\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\res
+com.fitmatch.mobile.app-jetified-firebase-messaging-24.0.0-32 C:\Users\jpsil\.gradle\caches\8.13\transforms\9d7ab60d2ebf88250c11af8e8621825d\transformed\jetified-firebase-messaging-24.0.0\res
+com.fitmatch.mobile.app-jetified-credentials-play-services-auth-1.2.0-rc01-33 C:\Users\jpsil\.gradle\caches\8.13\transforms\9eac98ac8e0a634405c1eedb4e481cba\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\res
+com.fitmatch.mobile.app-constraintlayout-2.2.0-34 C:\Users\jpsil\.gradle\caches\8.13\transforms\9ecb22e2e247c14f5336120d552cc527\transformed\constraintlayout-2.2.0\res
+com.fitmatch.mobile.app-appcompat-1.7.0-35 C:\Users\jpsil\.gradle\caches\8.13\transforms\ae654c5d17752afe667cbd655bb92ada\transformed\appcompat-1.7.0\res
+com.fitmatch.mobile.app-jetified-lifecycle-viewmodel-ktx-2.7.0-36 C:\Users\jpsil\.gradle\caches\8.13\transforms\b5e488368fbcfcfec66045bac234e8a7\transformed\jetified-lifecycle-viewmodel-ktx-2.7.0\res
+com.fitmatch.mobile.app-jetified-savedstate-ktx-1.2.1-37 C:\Users\jpsil\.gradle\caches\8.13\transforms\b750dcef6da6420fbbca332547598508\transformed\jetified-savedstate-ktx-1.2.1\res
+com.fitmatch.mobile.app-jetified-startup-runtime-1.1.1-38 C:\Users\jpsil\.gradle\caches\8.13\transforms\c9a111c18f230d53c629fecf9626f1ca\transformed\jetified-startup-runtime-1.1.1\res
+com.fitmatch.mobile.app-jetified-lifecycle-livedata-core-ktx-2.7.0-39 C:\Users\jpsil\.gradle\caches\8.13\transforms\cd9d795da366f884dcf086db93b060a3\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\res
+com.fitmatch.mobile.app-jetified-activity-1.9.1-40 C:\Users\jpsil\.gradle\caches\8.13\transforms\d5ffb0ca872f8a615d75a491fc1b7304\transformed\jetified-activity-1.9.1\res
+com.fitmatch.mobile.app-lifecycle-livedata-core-2.7.0-41 C:\Users\jpsil\.gradle\caches\8.13\transforms\da8e465a64fb960939f7f2ea5c5ab0a3\transformed\lifecycle-livedata-core-2.7.0\res
+com.fitmatch.mobile.app-jetified-firebase-common-21.0.0-42 C:\Users\jpsil\.gradle\caches\8.13\transforms\e66ad7a8ddeff2333e1f704a0d36d865\transformed\jetified-firebase-common-21.0.0\res
+com.fitmatch.mobile.app-jetified-annotation-experimental-1.4.0-43 C:\Users\jpsil\.gradle\caches\8.13\transforms\e7e7ef710a30b840636da3fe1d1bf66c\transformed\jetified-annotation-experimental-1.4.0\res
+com.fitmatch.mobile.app-jetified-core-ktx-1.13.0-44 C:\Users\jpsil\.gradle\caches\8.13\transforms\e9b6bd1577bfad36ecb2e263dff62ec9\transformed\jetified-core-ktx-1.13.0\res
+com.fitmatch.mobile.app-core-runtime-2.2.0-45 C:\Users\jpsil\.gradle\caches\8.13\transforms\ea727be33fa00bfc83de1618eed29375\transformed\core-runtime-2.2.0\res
+com.fitmatch.mobile.app-lifecycle-viewmodel-2.7.0-46 C:\Users\jpsil\.gradle\caches\8.13\transforms\f78dbbb86886c5386366070ba202612f\transformed\lifecycle-viewmodel-2.7.0\res
+com.fitmatch.mobile.app-pngs-47 C:\Users\jpsil\AndroidStudioProjects\FitMatchMobile_Final (1)\FitMatchMobile\app\build\generated\res\pngs\debug
+com.fitmatch.mobile.app-res-48 C:\Users\jpsil\AndroidStudioProjects\FitMatchMobile_Final (1)\FitMatchMobile\app\build\generated\res\processDebugGoogleServices
+com.fitmatch.mobile.app-resValues-49 C:\Users\jpsil\AndroidStudioProjects\FitMatchMobile_Final (1)\FitMatchMobile\app\build\generated\res\resValues\debug
+com.fitmatch.mobile.app-updated_navigation_xml-50 C:\Users\jpsil\AndroidStudioProjects\FitMatchMobile_Final (1)\FitMatchMobile\app\build\generated\updated_navigation_xml\debug
+com.fitmatch.mobile.app-packageDebugResources-51 C:\Users\jpsil\AndroidStudioProjects\FitMatchMobile_Final (1)\FitMatchMobile\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.fitmatch.mobile.app-packageDebugResources-52 C:\Users\jpsil\AndroidStudioProjects\FitMatchMobile_Final (1)\FitMatchMobile\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.fitmatch.mobile.app-debug-53 C:\Users\jpsil\AndroidStudioProjects\FitMatchMobile_Final (1)\FitMatchMobile\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.fitmatch.mobile.app-debug-54 C:\Users\jpsil\AndroidStudioProjects\FitMatchMobile_Final (1)\FitMatchMobile\app\src\debug\res
+com.fitmatch.mobile.app-main-55 C:\Users\jpsil\AndroidStudioProjects\FitMatchMobile_Final (1)\FitMatchMobile\app\src\main\res

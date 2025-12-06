@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fit_black">#101010</color>
+    <color name="fit_gray">#2A2A2A</color>
+    <color name="fit_gray_dark">#1A1A1A</color>
+    <color name="fit_white">#FFFFFF</color>
+    <color name="fit_yellow">#F8C015</color>
+    <string name="gcm_defaultSenderId" translatable="false">84447409228</string>
+    <string name="google_api_key" translatable="false">AIzaSyCeGAc8D0YQJrkkIut1ACQn_tUmmso0YGY</string>
+    <string name="google_app_id" translatable="false">1:84447409228:android:994c5ffba90bed1b6d70e9</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCeGAc8D0YQJrkkIut1ACQn_tUmmso0YGY</string>
+    <string name="google_storage_bucket" translatable="false">fitmatch-dd6e6.firebasestorage.app</string>
+    <string name="project_id" translatable="false">fitmatch-dd6e6</string>
+    <style name="Theme.FitMatch" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/fit_yellow</item>
+        <item name="colorSecondary">@color/fit_yellow</item>
+
+        <item name="android:statusBarColor">@color/fit_black</item>
+
+        <item name="android:windowBackground">@color/fit_black</item>
+
+        <item name="android:navigationBarColor">@color/fit_black</item>
+    </style>
+</resources>

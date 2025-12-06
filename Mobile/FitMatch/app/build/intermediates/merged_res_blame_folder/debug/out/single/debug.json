@@ -1,30 +1,38 @@
 [
     {
-        "merged": "com.fitmatch.mobile.app-merged_res-54:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.fitmatch.mobile.app-main-56:/mipmap-hdpi/ic_launcher.png"
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-merged_res-54:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-main-56:\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.fitmatch.mobile.app-merged_res-54:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.fitmatch.mobile.app-main-56:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-merged_res-54:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-main-56:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.fitmatch.mobile.app-merged_res-54:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.fitmatch.mobile.app-main-56:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-merged_res-54:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-main-56:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.fitmatch.mobile.app-merged_res-54:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.fitmatch.mobile.app-main-56:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-merged_res-54:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-main-56:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.fitmatch.mobile.app-merged_res-54:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.fitmatch.mobile.app-main-56:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-merged_res-54:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-main-56:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-merged_res-54:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-main-56:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-merged_res-54:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-main-56:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
         "merged": "com.fitmatch.mobile.app-merged_res-54:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "com.fitmatch.mobile.app-main-56:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.fitmatch.mobile.app-merged_res-54:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.fitmatch.mobile.app-main-56:/mipmap-mdpi/ic_launcher.png"
+        "merged": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-merged_res-54:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\jpsil\\.gradle\\daemon\\8.6\\com.fitmatch.mobile.app-main-56:\\mipmap-hdpi\\ic_launcher.png"
     }
 ]
